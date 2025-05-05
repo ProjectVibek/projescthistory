@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проект по Истории</title>
+  <!-- Подключение шрифта. Измените URL ниже, чтобы использовать другой шрифт -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Приветственное окно -->
+  <div id="welcome-screen" class="welcome-screen animated fadeInDown">
+    <div class="welcome-box">
+      <p class="welcome-text">
+        Проект по истории 8 класс. XVIII век.<br>
+        Нажмите "Начать игру!", чтобы приступить к вопросам.
+      </p>
+      <button id="start-game" class="start-button animated bounceIn">Начать игру!</button>
+    </div>
+  </div>
+
+  <!-- Основное окно вопросов -->
+  <div class="container hidden" id="quiz-container">
+    <h1 class="animated fadeIn">Вопросы</h1>
+    <div class="question-container fade-in">
+      <p id="question"></p>
+      <!-- Панель с вариантами ответов -->
+      <div class="answers-panel">
+        <button class="answer-button animated"></button>
+        <button class="answer-button animated"></button>
+        <button class="answer-button animated"></button>
+        <button class="answer-button animated"></button>
+      </div>
+      <button id="submit-answer" class="animated pulse">Ответить</button>
+      <p id="result-message"></p>
+    </div>
+  </div>
+
+  <!-- Конечный экран, изначально скрыт -->
+  <div class="container hidden" id="final-screen">
+    <h1 class="animated fadeInDown">Игра окончена!</h1>
+    <p id="final-score"></p>
+    <p id="final-grade"></p>
+    <!-- Редактируемое текстовое поле под размеры контейнера -->
+    <textarea id="final-text" placeholder="Введите комментарий..."></textarea>
+    <div class="final-buttons">
+      <button id="restart-game" class="final-button animated bounceIn">Начать сначала</button>
+      <button id="rate-creators" class="final-button animated bounceIn">Поставить 5 создателям</button>
+    </div>
+  </div>
+
+  <!-- Кнопочка "Скачать читы" -->
+  <button id="download-cheats" class="download-cheats animated fadeInUp">Скачать читы</button>
+</body>
+</html>
